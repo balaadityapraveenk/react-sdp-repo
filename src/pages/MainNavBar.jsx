@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BrowserRouter as Route, Routes} from 'react-router-dom';
-import './style.css';
-import Home from './Home.jsx';
+import { Link,Routes,Route } from 'react-router-dom';
+import Home from './Home';
 import About from './About';
 import Registration from './Registration';
 import AdminLogin from './AdminLogin';
 import ManagerLogin from './ManagerLogin';
 import CustomerLogin from './CustomerLogin';
+import './style.css';
 
 const MainNavBar = () => {
   return (
@@ -16,7 +15,7 @@ const MainNavBar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/" className="logo-link">
-            KL Event Management System - 2500031882
+           KL Event Management System -2500031882
           </Link>
         </div>
         <ul className="nav-menu">
@@ -58,7 +57,10 @@ const MainNavBar = () => {
             </ul>
           </li>
         </ul>
-        <Routes>
+      </div>
+    </nav>
+
+<Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/registration" element={<Registration />} />
@@ -66,9 +68,10 @@ const MainNavBar = () => {
         <Route path="/manager-login" element={<ManagerLogin />} />
         <Route path="/customer-login" element={<CustomerLogin />} />
       </Routes>
-      </div>
-    </nav>
+
+
     </div>
+
   );
 };
 
