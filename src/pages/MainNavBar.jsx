@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
-import { BrowserRouter as Route, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { BrowserRouter as Route, Routes} from 'react-router-dom';
 import './style.css';
 import Home from './Home.jsx';
 import About from './About';
@@ -8,7 +8,6 @@ import Registration from './Registration';
 import AdminLogin from './AdminLogin';
 import ManagerLogin from './ManagerLogin';
 import CustomerLogin from './CustomerLogin';
-import './App.css';
 
 const MainNavBar = () => {
   return (
