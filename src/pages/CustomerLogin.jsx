@@ -29,13 +29,14 @@ const CustomerLogin = () => {
     if (customer) 
     {
       sessionStorage.setItem('isCustomer', 'true');
+      sessionStorage.setItem('currentCustomer', JSON.stringify(customer));
       alert(`Login successful! Welcome, ${customer.fullName}!`);
       console.log('Login successful:', customer);
       setFormData({
         username: '',
         password: '',
       });
-      navigate('/');
+      navigate('/customer/home');
       window.location.reload();
     } 
     else 
