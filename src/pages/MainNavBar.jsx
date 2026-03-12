@@ -7,6 +7,7 @@ import AdminLogin from './AdminLogin';
 import ManagerLogin from './ManagerLogin';
 import CustomerLogin from './CustomerLogin';
 import './style.css';
+import PageNotFound from './PageNotFound';
 
 const MainNavBar = () => {
   return (
@@ -67,6 +68,7 @@ const MainNavBar = () => {
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/manager-login" element={<ManagerLogin />} />
         <Route path="/customer-login" element={<CustomerLogin />} />
+        <Route path='*' element={<PageNotFound/>}/>
       </Routes>
 
 
